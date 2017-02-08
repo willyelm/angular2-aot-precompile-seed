@@ -1,0 +1,27 @@
+// Navbar menu
+nav.navbar.navbar-toggleable-md.fixed-top.navbar-inverse.bg-primary
+  button.navbar-toggler.navbar-toggler-right(type='button',
+    [attr.aria-expanded]="isMenuOpen",
+    (click)="isMenuOpen = !isMenuOpen")
+    span.navbar-toggler-icon
+  a.navbar-brand
+    img(src="favicon.png", width="30")
+  #navbarCollapse.navbar-collapse([ngbCollapse]="!isMenuOpen")
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        a.nav-link
+          | Home
+    form.form-inline.mt-2.mt-md-0
+      input.form-control.mr-sm-2(type='text', placeholder='Search')
+      button.btn.btn-info.my-2.my-sm-0(type='submit') Search
+
+// Begin page content
+.container
+  .row
+    .col-12
+      .mt-3
+        h1 Angular Seed
+      p.lead {{ content }}
+footer.footer
+  .container
+    span.text-muted Place sticky footer content here.

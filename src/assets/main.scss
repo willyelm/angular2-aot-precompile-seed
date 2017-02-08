@@ -1,0 +1,13 @@
+@import "main.variables";
+@import "bootstrap";
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
